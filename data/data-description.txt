@@ -1,0 +1,1 @@
+This is the real time market price data of the futures upto the 5 min and 15 min resolutions.

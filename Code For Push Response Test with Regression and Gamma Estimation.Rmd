@@ -1,0 +1,61 @@
+```{r}
+# Reading in the given csv filHO
+HO_data = read.csv('./data/HO-5min.csv')
+COKE_data = read.csv('./data/COKE-5min.csv')
+
+# initializing the vectors and log vectors
+log_HO_Close = log(HO_data$Close)
+Sigma_HO = numeric(0)
+log_COKE_Close = log(COKE_data$Close)
+Sigma_COKE = numeric(0)
+tau = 1:10000
+Log_tau = log(tau)
+
+# calculating and storing rHOpective Sigmas
+for (t in tau)
+{
+  Sigma_HO[t] = sd(diff(log_HO_Close,t))
+  Sigma_COKE[t] = sd(diff(log_COKE_Close,t))
+  print(t)
+}
+
+# initializing log sigma vectors
+Log_Sigma_HO = log(Sigma_HO)
+Log_Sigma_COKE = log(Sigma_COKE)
+
+# plotting linear-linear graph
+plot(tau, Sigma_HO)
+plot(tau, Sigma_COKE)
+
+# plotting log-log graph
+plot(Log_tau, Log_Sigma_HO)
+plot(Log_tau, Log_Sigma_COKE)
+
+# initializing a data frame with relevant data for ease in generating models
+log_tau_sigma_data = cbind(Log_tau, Log_Sigma_HO, Log_Sigma_COKE)
+log_tau_sigma_df = data.frame(log_tau_sigma_data)
+
+# generating log-log linear model and displaying summariHO
+HO_log_linear_model = lm(Log_Sigma_HO ~ Log_tau, data = log_tau_sigma_df)
+summary(HO_log_linear_model)
+COKE_log_linear_model = lm(Log_Sigma_COKE ~ Log_tau, data = log_tau_sigma_df)
+summary(COKE_log_linear_model)
+```
+
+```{r}
+# plot Log_Sigma_HO and Log_Sigma_COKE on the y-axis and tau on the x-axis
+plot(Log_tau, Log_Sigma_HO, col = "blue", xlab = "Log_tau", ylab = "Log_Sigma_HO and Log_Sigma_COKE")
+points(Log_tau, Log_Sigma_COKE, col = "red")
+
+# adding a legend
+legend("topright", legend = c("HO", "COKE"), col = c("blue", "red"), pch = 1)
+```
+
+```{r}
+# plot Log_Sigma_HO and Log_Sigma_COKE on the y-axis and tau on the x-axis
+plot(tau, Sigma_HO, col = "blue", xlab = "Log_tau", ylab = "Log_Sigma_HO and Log_Sigma_COKE")
+points(tau, Sigma_COKE, col = "red")
+
+# adding a legend
+legend("topright", legend = c("HO", "COKE"), col = c("blue", "red"), pch = 1)
+```

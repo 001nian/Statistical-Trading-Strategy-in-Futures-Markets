@@ -1,0 +1,48 @@
+Performance Results
+
+4/23/2014 1:37:10 PM
+Time series: HO / HO-5min.asc
+
+Basic Channel System
+Length	10600
+StopPct	0.016
+-------------------------------------------------------------
+Net Equity	$112,117.42
+Net Profit	$12,117.42
+Net Profit To Worst Drawdown	331.71 %
+Average Loser	-1.11 %
+Average Winner	1.62 %
+Average Winner To Average Loser	145.89 %
+Gross Gain	$13,668.73
+Gross Loss	($1,551.31)
+Gross Gain Period	$107,545.20
+Gross Loss Period	($95,051.78)
+Profit Factor	8.81
+Profit Factor Period	1.13
+Trade Count	8
+Long Trade Count	2
+Short Trade Count	6
+Average Drawdown	($1,182.85)
+Worst Drawdown	($3,653.05)
+Percent Winners	87.50 %
+Percent Losers	12.50 %
+Best Winner	4.87 %
+Worst Loser	-1.11 %
+Best Winner To Worst Loser	438.89 %
+Winners Losers Ratio	700.00 %
+Sharpe Ratio	1.240
+Average RoR	1.38%
+Average Std Dev	1.11%
+Avg Bars In Trade	218
+Avg Bars In Winning Trade	202
+Avg Bars In Losing Trade	333
+Big Winner Count	6
+Net Profit Avg	$12,117.42
+Net Profit To Worst Drawdown Avg	331.71 %
+Profit Factor Avg	8.81
+-------------------------------------------------------------
+Slippage:	47
+Max Bars Back:	17001
+Series Date Start:	4/14/2010 10:10:00 AM
+Series Date End:	4/14/2014 2:30:00 PM
+
