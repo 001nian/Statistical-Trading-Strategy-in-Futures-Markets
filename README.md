@@ -1,6 +1,6 @@
 # Statistical-Trading-Strategy-in-Futures-Markets
 
-Functions Descriptions:
+- **Functions Descriptions:**
 
 --calculatePortfolio will generate a vector consisting of the value of the portfolio during each bar (5 minute window).
 	-Takes in the following inputs:
@@ -19,9 +19,9 @@ Functions Descriptions:
 --calculateMax, calculateMin, calculateSignal, and calculateTrades are all helper functions used in calculatePortfolio.
 	-Descriptions of each are located in the comments in the code
 
-EasyLanguage Code Structure Description of the Strategies:
+- **EasyLanguage Code Structure Description of the Strategies:**
 
-- MR—Stop—AvgPrice
+-- _**MR—Stop—AvgPrice**_
 ```
 /*
 This trading system places mean-reverting trades around the moving average outside of a band of width related to expected slippage plus a certain number of local volatilities. It has a pre-determined per-trade loss size expressed in percent.
@@ -81,7 +81,7 @@ begin
 ​Sell TradeSize next bar at MA*(1+BndPct2);
 end;
 ```
-- TF—Channel—Stop
+-- _**TF—Channel—Stop**_
 ```
 /*
 This trading system places trend-following (breakout) trades outside of a moving channel. It has a pre-determined per-trade loss size expressed in percent.
@@ -123,7 +123,7 @@ begin
 end;
 ```
 
-- More trend following strategies:
+- **More trend following strategies:**
 
 --Moving Average crossover.
     -Define two moving averages: one short-term and one long-term
