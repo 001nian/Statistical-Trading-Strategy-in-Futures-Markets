@@ -2,7 +2,7 @@
 
 - **Functions Descriptions:**
 
---calculatePortfolio will generate a vector consisting of the value of the portfolio during each bar (5 minute window).
+`calculatePortfolio` will generate a vector consisting of the value of the portfolio during each bar (5 minute window).
 
 	-Takes in the following inputs:
 		-chnLen is the channel length
@@ -13,18 +13,18 @@
 		-close is the vector of close prices the professor provided us
 		-capital is the amount of capital we have to start (I'm not sure if this is necessary)
 
---calculateDrawdown will generate a vector consisting of the current drawdown of the portfolio for each bar (5 minute window).
+`calculateDrawdown` will generate a vector consisting of the current drawdown of the portfolio for each bar (5 minute window).
 
 	-Takes in the following inputs:
 		-portfolio is the vector of portfolio values calculated from 'calculatePortfolio'
 
---calculateMax, calculateMin, calculateSignal, and calculateTrades are all helper functions used in calculatePortfolio.
+`calculateMax, calculateMin, calculateSignal, and calculateTrades` are all helper functions used in `calculatePortfolio`.
 
 	-Descriptions of each are located in the comments in the code
 
 - **EasyLanguage Code Structure Description of the Strategies:**
 
--- _**MR—Stop—AvgPrice**_
+_**MR—Stop—AvgPrice**_
 ```
 /*
 This trading system places mean-reverting trades around the moving average outside of a band of width related to expected slippage plus a certain number of local volatilities. It has a pre-determined per-trade loss size expressed in percent.
@@ -84,7 +84,7 @@ begin
 	Sell TradeSize next bar at MA*(1+BndPct2);
 end;
 ```
--- _**TF—Channel—Stop**_
+_**TF—Channel—Stop**_
 ```
 /*
 This trading system places trend-following (breakout) trades outside of a moving channel. It has a pre-determined per-trade loss size expressed in percent.
@@ -137,15 +137,10 @@ end;
 -Types of moving averages
 
     -Simple
-    
         -Simple mean of the price of the past X number of days.
-	
     -Weighted
-    
         -Weighted average by placing more weight on the more recent prices.
-	
     -Exponential
-    
         -A type of weighted moving average.
         -For a price that occured i days ago, the weight would be a^i. With 0<a<1
         
