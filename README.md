@@ -152,3 +152,8 @@ end;
     -Take an EMA of the MACD as your signal.
         -When the signal turns positive, go long.
         -When the signal turns negative, go flat (or go short)
+
+- **PnL Formula description:**
+ ![image](https://github.com/DhyeyMavani2003/Statistical-Trading-Strategy-in-Futures-Markets/assets/82772894/a8f91d11-089f-428f-a26d-9f6e1b5071be)
+
+- I also did the mirror image changes to get the similar formula for the shorts
